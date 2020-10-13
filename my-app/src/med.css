@@ -1,0 +1,80 @@
+body {
+  font-family: Arial;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  width: 100%;
+  height: 500px;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("https://cutewallpaper.org/21/wallpaper-wide-screen/yoga-meditation-widescreen-high-resolution-wallpaper-for-.jpg");
+}
+
+.quote{
+  padding-left: 20%;
+   font-size: 30px;
+   color: black;
+   font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-top: 98px;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 100%;
+}
+
+.fakeimg {
+  background-image: url("https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/09/meditation-eyes-closed-732x549-thumbnail-732x549.jpg?w=756&h=567");
+  background-repeat: no-repeat;
+   background-size: 80% 50%;
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+}
+.blog{
+  color: black;
+  padding-top: 2%;
+}
+.blockspara{
+  padding-top: 5%;
+}
+
+.para{
+  padding-top: 1%;
+  font-size: 23px;
+  color: black;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding-right: 20px;
+  margin-top: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.row{
+  background-color: #d7d8db;
+}
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}

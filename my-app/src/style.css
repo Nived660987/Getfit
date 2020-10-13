@@ -1,0 +1,13 @@
+.iheader {
+    background-color: #14213d;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .ilogo {
+    color: black;
+    padding: 0 1rem;
+    transition: 0.9s;
+    align-content: flex-start;
+  }
+
