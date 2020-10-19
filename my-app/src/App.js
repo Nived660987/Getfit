@@ -10,7 +10,6 @@ import { Typography, Button, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import CustomerService from './views/CustomerService';
 import ProductHeroLayout from './views/ProductHeroLayout';
-import Nav from './Nav';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import About from './About';
 import Home from './Home';
@@ -23,6 +22,8 @@ import Diet from "./category/Diet";
 import Adminlogin from './Admin/Adminlogin';
 import dashboard from './Admin/Dashboard/dashboard';
 import Meditation from "./category/Meditation";
+import App1 from "./category/App1";
+
 
 function App() {
 	const [userData, setUserData] = useState({
@@ -65,6 +66,7 @@ function App() {
 						<Route path="/category/Covid" component={Covid} />
 						<Route path="/category/Meditation" component={Meditation} />
 						<Route path="/category/Diet" component={Diet} />
+						<Route path="/category/App1" component={App1} />
 						<Route path="/Adminlogin" component={Adminlogin} />
 						<Route path="/dashboard" component={dashboard} />
 						<ProductHero />

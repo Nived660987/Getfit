@@ -45,6 +45,11 @@ export default function AddWorkout()
         console.log("Exercise add failed");
     }
 };
+
+if(submit)
+   console.log("Workout Added");
+else
+	console.log("Not Added");
   
     return (
 		<div className="AddWorkout_exercise">

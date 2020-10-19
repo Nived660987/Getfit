@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#153a94',
+		backgroundColor: '#94b3b1',
 		marginRight: theme.spacing(1),
 		'&:hover': {
 			backgroundColor: theme.palette.warning.dark,
@@ -70,6 +70,7 @@ const LANGUAGES = [
 		code: 'fr-FR',
 		name: 'Français',
 	},
+	
 ];
 
 export default function AppFooter() {

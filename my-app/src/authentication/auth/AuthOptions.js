@@ -10,11 +10,13 @@ export default function AuthOptions() {
   const register = () => history.push("/register");
   const login = () => history.push("/login");
   const logout = () => {
+    
     setUserData({
       token: undefined,
       user: undefined,
     });
     localStorage.setItem("auth-token", "");
+    history.push('/login');
   };
   return (
     <nav className="btn">

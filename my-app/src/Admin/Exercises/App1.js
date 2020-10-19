@@ -11,6 +11,9 @@ function App1(){
         axios.get("http://localhost:5000/api/exercises")
         .then(res => setWorkouts(res.data))
         .catch(error => console.log(error));
+        return () => {
+			console.log('Component unmounted');
+		};
     })
     return(
         <div>

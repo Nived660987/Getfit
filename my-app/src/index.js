@@ -5,16 +5,22 @@ import {BrowserRouter as Router} from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from "./App";
+
 import Diet from "./category/Diet";
-import Meditation from './category/Meditation';
+//import App1 from './category/App1';
+import App1 from './Admin/Exercises/App1';
+import App2 from './Admin/Users/App2';
+import Food from './category/Food';
+
+
 
 
 
 ReactDOM.render(
-  <React.StrictMode>
-      <Meditation/>
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<Food/>
+	</React.StrictMode>,
+	document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change

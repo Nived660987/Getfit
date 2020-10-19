@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 150px;
+    padding-top: 110px;
 }
 
 .login_container >h1{
@@ -41,8 +41,8 @@ color: white;
 
 .login_container {
     padding-top: px;
-    width: 320px;
-    height: 450px;
+    width: 300px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -95,7 +95,7 @@ color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 
 
@@ -115,7 +115,7 @@ label{
     margin-bottom: 20px;
     color: white;
     display: inline-block;
-    width: 90%;
+    width: 9    0%;
     text-align: left;
 }
  
@@ -129,22 +129,22 @@ label{
 
 
 .register_container {
-    padding-top: px;
-    width: 350px;
-    height: 580px;
+    width: 320px;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    padding-top: 50px;
+    padding-top: 10px;
     border: 1px solid lightgray;
     background: rgba(0, 0,0, 0.5);
     display: inline-block;
     text-align: left;
+    contain: content;
 }
 
 
 p{
     color: white;
     padding-top: 20px;
-    font-size: medium;
+    font-size: small;
 }

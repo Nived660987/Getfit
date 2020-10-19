@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import Sound from 'react-sound'
+import React, { Component } from 'react';
+import Sound from 'react-sound';
 
 class SoundComponent extends Component {
   constructor(props) {
@@ -45,4 +45,4 @@ class SoundComponent extends Component {
   }
 }
 
-export default SoundComponent
+export default SoundComponent;

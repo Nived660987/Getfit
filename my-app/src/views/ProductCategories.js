@@ -112,7 +112,7 @@ function ProductCategories(props) {
     {
       url:
         'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400&q=80',
-      title: 'Fitness',
+      title: 'App1',
       width: '33%',
     },
     {

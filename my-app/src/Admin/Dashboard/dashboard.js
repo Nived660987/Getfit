@@ -8,18 +8,20 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemIcon from '@material-ui/core/ListItemIcon'; 
 import ListItemText from '@material-ui/core/ListItemText';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import { Person} from '@material-ui/icons';
-import App2 from "../Users/App2";
+import { Person } from '@material-ui/icons';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import AddWorkout from '../AddWorkout';
 import EditWorkout from '../EditWorkout';
-import {useState, createContext}  from 'react';
-import DeleteWorkout from "../DeleteWorkout";
+import { useState, createContext } from 'react';
+import DeleteWorkout from '../DeleteWorkout';
+import App1 from '../../Admin/Exercises/App1';
+import App2 from '../../Admin/Users/App2';
+
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -46,23 +48,23 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ClippedDrawer() {
-    const classes = useStyles();
-    const [Dash, setDash] = useState("Users")
-    const setDashboard = ()  =>{
-        switch (Dash) {
-			case "Users":
+	const classes = useStyles();
+	const [Dash, setDash] = useState('Delete Workout');
+	const setDashboard = () => {
+		switch (Dash) {
+			case 'Users':
 				return <App2 />;
-			case "Add Workout":
+			case 'Add Workout':
 				return <AddWorkout />;
-			case "Update Workout":
+			case 'Update Workout':
 				return <EditWorkout />;
-			case "delete Workout":
-				return <DeleteWorkout />;
+			case 'Delete Workout':
+				return <App1 />;
 
 			default:
 				break;
 		}
-    }
+	};
 
 	return (
 		<div className={classes.root}>
@@ -102,11 +104,11 @@ export default function ClippedDrawer() {
 							</ListItemIcon>
 							<ListItemText primary="Update Workout" />
 						</ListItem>
-						<ListItem button onClick={(e) => setDash('delete Workout')}>
+						<ListItem button onClick={(e) => setDash('App1')}>
 							<ListItemIcon>
 								<DeleteForeverIcon />
 							</ListItemIcon>
-							<ListItemText primary="delete Workout" />
+							<ListItemText primary="App1" />
 						</ListItem>
 					</List>
 					<Divider />

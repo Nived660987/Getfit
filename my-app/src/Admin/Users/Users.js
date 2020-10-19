@@ -1,17 +1,16 @@
-import React,{useState} from "react";
-import {Link} from "react-router-dom";
-import {Button} from "@material-ui/core";
-import axios from "axios";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from '@material-ui/core';
+import axios from 'axios';
 import './users.css';
-const Users= ({users})=>{
-    const[user,setUser]=useState([]);
+const Users = ({ users }) => {
+	const [user, setUser] = useState([]);
 
-    const deleteUser=id=>{
-        axios.delete(`http://localhost:5000/users/${id}`)
-        .then(res => alert(res.data))
-        setUser(user.filter(elem => elem._id !== id));
-    }
-    return (
+	const deleteUser = (id) => {
+		axios.delete(`http://localhost:5000/users/${id}`).then((res) => alert(res.data));
+		setUser(user.filter((elem) => elem._id !== id));
+	};
+	return (
 		<div className="deluser">
 			<h1>Manage users.....</h1>
 			<div>
@@ -39,13 +38,6 @@ const Users= ({users})=>{
 			</div>
 		</div>
 	);
-
-
-
-    
-
-
-
 };
 
 export default Users;

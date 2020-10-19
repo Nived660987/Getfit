@@ -45,16 +45,7 @@ function ProductHero(props) {
       <Typography color="inherit" align="center" variant="h5" className={classes.h5}>
         Enjoy the different workouts. Don't Quit!
       </Typography>
-      <Button
-        color="secondary"
-        variant="contained"
-        size="large"
-        className={classes.button}
-        component="a"
-        href="../Register"
-      >
-        Register
-      </Button>
+     
       <Typography variant="body2" color="inherit" className={classes.more}>
         Discover the experience
       </Typography>

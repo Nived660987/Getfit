@@ -15,14 +15,14 @@ let Dummy_Exercises=[
        let exercise;
        exercise=Exercise.findById(exerciseId)
        .then(exercise => res.json(exercise))
-       .catch(err =>res.status(404).res.json("Error received"));
+       .catch(err =>res.status(404).json("Error received"));
        if(!exercise)
     {
        const error= new HttpError("Could not find id",404);
         return next(error);
 
     }
-     res.json({exercise: (await exercise).toObject({getters: true})});
+     
     }
 
 
@@ -31,14 +31,14 @@ const getExercise= async (req,res,next) =>{
     let exercise;
      exercise=Exercise.find()
      .then(exercise =>res.json(exercise))
-     .catch(err =>res.status(404).res.json("Error received"));
+     .catch(err =>res.status(404).json("Error received"));
     if(!exercise)
     {
        const error= new HttpError("Could not find id",404);
         return next(error);
 
     }
-     res.json({exercise: (await exercise).toObject({getters: true})});
+     
 
 
   };

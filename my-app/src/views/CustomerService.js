@@ -7,7 +7,7 @@ import Typography from '../components/Typography';
 
 const styles = (theme) => ({
 	root: {
-		display: 'flex',
+		display: 'block',
 		color: '#02299e',
 		flexDirection: 'column',
 		alignItems: 'center',
@@ -18,7 +18,8 @@ const styles = (theme) => ({
 		background: 'linear-gradient(45deg, #001e96 15%, #0b83b3  90%)',
 		border: '3px solid currentColor',
 		borderRadius: 0,
-		height: 'auto',
+		height: '10vh',
+		width: '80vh',
 		padding: theme.spacing(2, 5),
 	},
 	link: {

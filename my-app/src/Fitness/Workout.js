@@ -1,25 +1,25 @@
-import React,{useEffect,useState} from "react";
- import axios from "axios";
- import CCard from "../components/Card";
-import Header from "../authentication/layout/Header";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import CCard from '../components/Card';
+import Header from '../authentication/layout/Header';
 import '../Admin/Workout.css';
-const Workout=props=>{
-    const[title,setTitle]=useState("");
-    const[description,setDescription]=useState("");
-    const[exercises,setExercises]=useState([""]);
-    useEffect(() =>{
-        axios.get(`http://localhost:5000/api/exercises/${props.match.params.id}`)
-        .then(res => [
-            setTitle(res.data.title),
-            setDescription(res.data.description),
-            setExercises(res.data.exercises)
-        ])
-        .catch(error =>console.log(error));
-    },[props]);
+const Workout = (props) => {
+	const [title, setTitle] = useState('');
+	const [description, setDescription] = useState('');
+	const [exercises, setExercises] = useState(['']);
+	useEffect(() => {
+		axios
+			.get(`http://localhost:5000/api/exercises/${props.match.params.id}`)
+			.then((res) => [
+				setTitle(res.data.title),
+				setDescription(res.data.description),
+				setExercises(res.data.exercises),
+			])
+			.catch((error) => console.log(error));
+	}, [props]);
 
-    
-    return (
-		<div >
+	return (
+		<div>
 			<Header />
 			Welcome..!!!
 			<h2>{title}</h2>
@@ -33,10 +33,6 @@ const Workout=props=>{
 			</div>
 		</div>
 	);
-
-
-
-
-}
+};
 
 export default Workout;

@@ -116,14 +116,25 @@ router.post("/tokenIsValid", async (req, res) => {
 router.get("/", async (req, res) => {
   let user;
   user = await User.find()
-  .then(user =>res.json(user));
+  .then(user =>res.json(user))
+  .catch(err=>console.log("Error received"));
   if(!user)
   {
-     const error= new HttpError("Could not find id",404);
+     const error= new HttpError("Could not find user",404);
       return next(error);
 
-  }
-   res.json({user: (await user).toObject({getters: true})});
-  
+  } 
+});
+
+router.get('/:id', async (req, res) => {
+  const userId=req.params.id;
+  let user;
+	user = await User.findById(userId)
+		.then((user) => res.json(user))
+		.catch((err) => console.log('Error received'));
+	if (!user) {
+		const error = new HttpError('Could not find id', 404);
+		return next(error);
+	}
 });
 module.exports = router;
