@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import MuiAppBar from '@material-ui/core/AppBar';
 
 const styles = (theme) => ({
-  root: {
+  appbar: {
     color: theme.palette.common.white,
   },
 });

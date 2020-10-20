@@ -13,19 +13,20 @@ import ListItemText from '@material-ui/core/ListItemText';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import { Person } from '@material-ui/icons';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
 import AddWorkout from '../AddWorkout';
 import EditWorkout from '../EditWorkout';
 import { useState, createContext } from 'react';
 import DeleteWorkout from '../DeleteWorkout';
+import { useHistory } from 'react-router-dom';
 import App1 from '../../Admin/Exercises/App1';
 import App2 from '../../Admin/Users/App2';
-
+import App from '../../App';
+import { Button } from '@material-ui/core';
+import "./dashboard.css";
 const drawerWidth = 240;
-
 const useStyles = makeStyles((theme) => ({
-	root: {
+	Dashroot: {
 		display: 'flex',
 	},
 	appBar: {
@@ -56,24 +57,30 @@ export default function ClippedDrawer() {
 				return <App2 />;
 			case 'Add Workout':
 				return <AddWorkout />;
-			case 'Update Workout':
-				return <EditWorkout />;
-			case 'Delete Workout':
+			case 'Workouts':
 				return <App1 />;
-
+			case 'Logout':
+				return <App />;
 			default:
 				break;
 		}
 	};
 
 	return (
-		<div className={classes.root}>
+		<div className={classes.Dashroot}>
 			<CssBaseline />
 			<AppBar position="fixed" color="primary" className={classes.appBar}>
 				<Toolbar>
-					<Typography variant="h6" noWrap color="secondary">
-						GET-FIT Dashboard
-					</Typography>
+					<div className="Heading">
+						<Typography variant="h6" noWrap color="secondary">
+							GET-FIT Dashboard
+						</Typography>
+					</div>
+					<div className="dashbtn">
+						<Button color="secondary" variant="contained" size="Large" href="/login">
+							Logout
+						</Button>
+					</div>
 				</Toolbar>
 			</AppBar>
 			<Drawer
@@ -98,27 +105,18 @@ export default function ClippedDrawer() {
 							</ListItemIcon>
 							<ListItemText primary="Add Workout" />
 						</ListItem>
-						<ListItem button onClick={(e) => setDash('Update Workout')}>
+						<ListItem button onClick={(e) => setDash('Workouts')}>
 							<ListItemIcon>
 								<FitnessCenterIcon />
 							</ListItemIcon>
-							<ListItemText primary="Update Workout" />
+							<ListItemText primary="Workouts" />
 						</ListItem>
-						<ListItem button onClick={(e) => setDash('App1')}>
+						{/*<ListItem button onClick={(e) => setDash('Delete Workout')}>
 							<ListItemIcon>
 								<DeleteForeverIcon />
 							</ListItemIcon>
-							<ListItemText primary="App1" />
-						</ListItem>
-					</List>
-					<Divider />
-					<List>
-						<ListItem button>
-							<ListItemIcon>
-								<ExitToAppIcon />
-							</ListItemIcon>
-							<ListItemText primary="Logout" />
-						</ListItem>
+							<ListItemText primary="Delete W" />
+						</ListItem>*/}
 					</List>
 				</div>
 			</Drawer>

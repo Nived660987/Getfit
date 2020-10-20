@@ -27,7 +27,7 @@ const Users = ({ users }) => {
 						<Button
 							color="secondary"
 							variant="contained"
-							size="small"
+							size="Large"
 							padding-left="150px"
 							onClick={() => deleteUser(user._id)}
 						>

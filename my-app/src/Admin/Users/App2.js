@@ -18,7 +18,7 @@ function App2() {
 	return (
 		<div>
 			<Router>
-				<Route exact path="/" render={() => <Users users={users} />} />
+				<Route exact path="/dashboard" render={() => <Users users={users} />} />
 				<Route path="/users/:id" render={(props) => <User {...props} users={users} />} />
 			</Router>
 		</div>

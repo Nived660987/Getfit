@@ -106,13 +106,13 @@ function ProductCategories(props) {
     {
       url:
         'https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_limit,w_695/v1537210711/dkwlqnj2sgxmdpy2mv6z.png',
-      title: 'Beauty Sleep ',
+      title: 'BeautySleep ',
       width: '33%',
     },
     {
       url:
         'https://images.unsplash.com/photo-1533727937480-da3a97967e95?auto=format&fit=crop&w=400&q=80',
-      title: 'App1',
+      title: 'Fitness',
       width: '33%',
     },
     {

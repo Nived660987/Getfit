@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import RecipeDetails from '../Recipe/RecipeDetails';
+import "./recipe.css";
 const Recipe = ({ recipe }) => {
 	const [show, setShow] = useState(false);
 

@@ -6,10 +6,9 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '../components/Typography';
 
 const styles = (theme) => ({
-	root: {
+	custservice: {
 		display: 'block',
 		color: '#02299e',
-		flexDirection: 'column',
 		alignItems: 'center',
 		marginTop: theme.spacing(9),
 		marginBottom: theme.spacing(9),
@@ -35,7 +34,7 @@ function CustomerService(props) {
 	const { classes } = props;
 
 	return (
-		<Container className={classes.root} component="section">
+		<Container className={classes.custservice} component="section">
 			<Button className={classes.button}>
 				<Typography variant="h4" component="span">
 					<h2 style={{ color: '#ffff' }}>Got any questions? Need help?</h2>

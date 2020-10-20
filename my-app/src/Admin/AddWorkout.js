@@ -39,23 +39,35 @@ export default function AddWorkout()
     try{
         const addExercise={img,title,description,workoutType,exercises};
         await Axios.post("http://localhost:5000/api/exercises",addExercise); 
-        
+		 if(addExercise)
+		 {
+			alert("Workout Added");
+			 resetFields();
+				
+			
+		 }
+
     }catch(err)
     {
-        console.log("Exercise add failed");
+       alert("Exercise add failed");
     }
 };
+  const resetFields=()=>{
+	  setImg(' ');
+	  setTitle(' ');
+	  setDescription(' ');
+	  setType(' ');
+	  setExercises(' ');
+  }
 
-if(submit)
-   console.log("Workout Added");
-else
-	console.log("Not Added");
+
   
     return (
 		<div className="AddWorkout_exercise">
 			<form className="form" onSubmit={submit}>
 				<label>Title Image</label>
 				<input type="text" name="image" onChange={(e) => setImg(e.target.value)} />
+				
 				<label>Title</label>
 				<input type="text" name="title" onChange={(e) => setTitle(e.target.value)} />
 				<label>Description</label>
@@ -92,6 +104,7 @@ else
 					<Button color="secondary" variant="contained" size="small" padding-left="150px">
 						<input type="submit" value="Submit" />
 					</Button>
+				{/*	<Button onClick={()=>resetFields()}>Reset</Button>*/}
 				</div>
 			</form>
 		</div>

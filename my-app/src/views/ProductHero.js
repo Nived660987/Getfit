@@ -46,7 +46,7 @@ function ProductHero(props) {
         Enjoy the different workouts. Don't Quit!
       </Typography>
      
-      <Typography variant="body2" color="inherit" className={classes.more}>
+      <Typography variant="h5" color="inherit" className={classes.more}>
         Discover the experience
       </Typography>
     </ProductHeroLayout>

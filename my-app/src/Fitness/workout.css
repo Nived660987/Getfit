@@ -10,3 +10,20 @@
 .fitness{
     padding-top: 80px;
 }
+
+.deluser{
+    padding-top: 80px;
+   
+}
+
+.search{
+    position:absolute;
+    left:76%;
+    top:12%;
+    width:20%;   
+}
+.workoutc{
+    padding-top: 100px;
+    flex-direction: row;
+}
+

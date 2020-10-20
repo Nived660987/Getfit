@@ -6,11 +6,9 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from "./App";
 
-import Diet from "./category/Diet";
-//import App1 from './category/App1';
 import App1 from './Admin/Exercises/App1';
 import App2 from './Admin/Users/App2';
-import Food from './category/Food';
+
 
 
 
@@ -18,7 +16,7 @@ import Food from './category/Food';
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Food/>
+		<App />
 	</React.StrictMode>,
 	document.getElementById('root')
 );

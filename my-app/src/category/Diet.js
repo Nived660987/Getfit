@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import "../Diet/Diet.css";
+import '../Diet/Diet.css';
+import Button from '@material-ui/core/Button';
+import Typography from '../components/Typography';
 
 class Diet extends Component {
 	constructor(props) {
@@ -79,18 +81,18 @@ class Diet extends Component {
 									onChange={this.setHeight.bind(this)}
 								/>
 							</ul>
-							
-								<ul>
-									<button onClick={this.bmiCalc.bind(this)} className="dbutton">
-										Calculate
-									</button>
-								</ul>
-								<ul>
-									<button onClick={this.reset.bind(this)} className="dbutton">
-										Reset
-									</button>
-								</ul>
-							
+
+							<ul>
+								<button onClick={this.bmiCalc.bind(this)} className="dbutton">
+									Calculate
+								</button>
+							</ul>
+							<ul>
+								<button onClick={this.reset.bind(this)} className="dbutton">
+									Reset
+								</button>
+							</ul>
+
 							<ul>
 								<span className="response">BMI: {this.state.bmi} </span>
 							</ul>
@@ -103,7 +105,7 @@ class Diet extends Component {
 				<div className="main-footer">
 					<div className="container">
 						<div className="content-wrap">
-							<h1>Diet Plan according to your weight!!</h1>
+							<h2>Diet Plan according to your weight!!</h2>
 							<div className="row">
 								<div className="col">
 									<h1>Principles of Diet Planning</h1>
@@ -159,6 +161,12 @@ class Diet extends Component {
 									<li>Water is a very important element of a balanced diet.</li>
 									<li>Dinner should be light and taken at least two hours before bedtime.</li>
 									<li>Get good quality sleep.</li>
+
+									<a href="/category/Food">
+										<button className="Foodbutton" href="/Food">
+											Checkout Food Recipe
+										</button>
+									</a>
 								</div>
 							</div>
 						</div>

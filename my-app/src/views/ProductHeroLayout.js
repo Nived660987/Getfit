@@ -5,13 +5,14 @@ import { withStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
 const styles = (theme) => ({
-  root: {
+  main: {
     color: theme.palette.common.white,
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
     [theme.breakpoints.up('sm')]: {
       height: '100vh',
+      width: '201vh',
       minHeight: 683,
       maxHeight: 1300,
     },
@@ -22,6 +23,7 @@ const styles = (theme) => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    width: "100%",
   },
   backdrop: {
     position: 'absolute',
@@ -53,7 +55,7 @@ function ProductHeroLayout(props) {
   const { backgroundClassName, children, classes } = props;
 
   return (
-    <section className={classes.root}>
+    <section className={classes.main}>
       <Container className={classes.container}>
 
         {children}

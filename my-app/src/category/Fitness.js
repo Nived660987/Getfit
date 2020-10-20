@@ -16,7 +16,7 @@ function App1() {
 	return (
 		<div>
 			<Router>
-				<Route exact path="/" render={() => <Workouts workouts={workouts} />} />
+				<Route exact path="/category/Fitness" render={() => <Workouts workouts={workouts} />} />
 				<Route path="/exercises/:id" render={(props) => <Workout {...props} workouts={workouts} />} />
 			</Router>
 		</div>

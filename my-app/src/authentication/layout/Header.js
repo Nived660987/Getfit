@@ -19,7 +19,7 @@ export default function Header() {
 					<Button
 						color="secondary"
 						variant="contained"
-						size="small"
+						size="Large"
 						padding-left="150px"
 						component="a"
 						href="/Adminlogin"

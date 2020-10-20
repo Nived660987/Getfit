@@ -1,14 +1,30 @@
 .usname{
      color: #000000;
-     font-size: 1.5rem;
+     font-size: 2rem;
 }
 
 .deluser{
+   height: 20%;
     background-color:#001a4d;
     color: honeydew;
 }
 .data{
     color: black;
+}
+
+
+.deluser >h1{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    font-size: 50px;
+    text-align: start;
+    padding-left: 20px;
+    
+
+}
+.deluser >input{
+    position: fixed ;
 }
 
 .containeruser{

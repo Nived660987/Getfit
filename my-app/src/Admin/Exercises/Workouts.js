@@ -32,10 +32,11 @@ const Workouts = ({ workouts }) => {
 
 	return (
 		<div className="deluser">
-			<h1> Choose your workout</h1>
+			<div className="deluser">
+				<h1> Choose your workout</h1>
 
-			<input type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)} />
-
+				<input type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)} />
+			</div>
 			{workouts
 				.filter((workout) => {
 					if (search == null || search == undefined) return workout;
@@ -57,7 +58,7 @@ const Workouts = ({ workouts }) => {
 						</Link>
 						<div>
 							<Link to={`/editWorkout/${workout._id}`}>
-								<Button color="primary" variant="contained" size="small" padding-left="150px">
+								<Button color="primary" variant="contained" size="Large" padding-left="150px">
 									Edit
 								</Button>
 							</Link>

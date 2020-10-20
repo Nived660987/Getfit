@@ -48,10 +48,11 @@ export default function EditWorkout(props)
     try{
         const editExercise={img,title,description,workoutType,exercises};
         await Axios.patch(`http://localhost:5000/api/exercises/${props.match.params.id}`,editExercise); 
-        
+        if(editExercise)
+          alert("Workout Edit Success");
     }catch(err)
     {
-        console.log("Exercise add failed");
+        console.log("Exercise update failed");
     }
 };
   
