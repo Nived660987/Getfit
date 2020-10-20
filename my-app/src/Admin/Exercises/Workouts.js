@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 import axios from 'axios';
 import CCard from '../../components/Card';
-import '../Users/users.css';
+import '../Workout.css';
 const Workouts = ({ workouts }) => {
 	const [exercise, setExercises] = useState([]);
 	const [search, setSearch] = useState();
@@ -31,11 +31,11 @@ const Workouts = ({ workouts }) => {
 		}*/
 
 	return (
-		<div className="deluser">
+		<div className="workout">
 			<div className="deluser">
 				<h1> Choose your workout</h1>
 
-				<input type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)} />
+				<input className="search" type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)} />
 			</div>
 			{workouts
 				.filter((workout) => {
@@ -50,6 +50,7 @@ const Workouts = ({ workouts }) => {
 							}}
 						>
 							<CCard
+							className="ccard"
 								img={workout.img}
 								title={workout.title}
 								description={workout.description}
@@ -58,7 +59,7 @@ const Workouts = ({ workouts }) => {
 						</Link>
 						<div>
 							<Link to={`/editWorkout/${workout._id}`}>
-								<Button color="primary" variant="contained" size="Large" padding-left="150px">
+								<Button color="primary" variant="contained" size="ELarge" padding-left="150px">
 									Edit
 								</Button>
 							</Link>
@@ -67,7 +68,7 @@ const Workouts = ({ workouts }) => {
 							<Button
 								color="secondary"
 								variant="contained"
-								size="small"
+								size="ELarge"
 								padding-left="150px"
 								onClick={() => deleteExercise(workout._id)}
 							>

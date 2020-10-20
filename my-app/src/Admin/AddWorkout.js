@@ -78,6 +78,7 @@ export default function AddWorkout()
 					<div key={index}>
 						<label>Image</label>
 						<input
+							
 							type="text"
 							name="image"
 							value={exercise.image}
@@ -101,9 +102,9 @@ export default function AddWorkout()
 					</div>
 				))}
 				<div>
-					<Button color="secondary" variant="contained" size="small" padding-left="150px">
-						<input type="submit" value="Submit" />
-					</Button>
+					
+						<input className="" type="submit" value="Submit" />
+					
 				{/*	<Button onClick={()=>resetFields()}>Reset</Button>*/}
 				</div>
 			</form>

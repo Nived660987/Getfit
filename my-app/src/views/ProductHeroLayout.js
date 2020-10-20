@@ -12,7 +12,7 @@ const styles = (theme) => ({
     alignItems: 'center',
     [theme.breakpoints.up('sm')]: {
       height: '100vh',
-      width: '201vh',
+      width: '205vh',
       minHeight: 683,
       maxHeight: 1300,
     },

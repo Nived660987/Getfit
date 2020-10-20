@@ -9,6 +9,27 @@
     text-align: left; 
 }
 .form >label{
-    color: black;
+    color: white;
     text-align: left;
+}
+
+
+.deluser{
+    width: 100%;
+
+}
+
+.search{
+    width: 100%;
+        padding: 12px 24px;
+        background-color: white;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 15px;
+        color: #575756;
+}
+
+.fitnesscard{
+    flex-direction: column;
+    
 }

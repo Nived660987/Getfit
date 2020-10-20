@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CCard from '../components/Card';
 import Header from '../authentication/layout/Header';
-import '../Admin/Workout.css';
+import "./fitness.css";
 const Workout = (props) => {
 	const [title, setTitle] = useState('');
 	const [description, setDescription] = useState('');

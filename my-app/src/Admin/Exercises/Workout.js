@@ -23,7 +23,7 @@ const Workout=props=>{
 			Welcome..!!!
 			<h2>{title}</h2>
 			<p>{description}</p>
-			<div>
+			<div className="fitnesscard">
 				{exercises.map((exercise, key) => (
 					<div keys={key}>
 						<CCard img={exercise.image} title={exercise.exerciseName} />

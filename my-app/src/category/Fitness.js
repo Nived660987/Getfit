@@ -3,7 +3,7 @@ import Workouts from '../Fitness/Workouts';
 import Workout from '../Fitness/Workout';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import axios from 'axios';
-import "../Fitness/workout.css";
+import "../Fitness/fitness.css";
 
 function App1() {
 	const [workouts, setWorkouts] = useState([]);

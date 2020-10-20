@@ -69,7 +69,7 @@ export default function ClippedDrawer() {
 	return (
 		<div className={classes.Dashroot}>
 			<CssBaseline />
-			<AppBar position="fixed" color="primary" className={classes.appBar}>
+			<AppBar  position="fixed" color="primary" className={classes.appBar}>
 				<Toolbar>
 					<div className="Heading">
 						<Typography variant="h6" noWrap color="secondary">
