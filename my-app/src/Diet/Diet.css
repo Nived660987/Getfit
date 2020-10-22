@@ -47,8 +47,8 @@
 }
 .col >h2{
     padding-left: 50px;
-    font-weight: 400;
-    font-size: 25px;
+    font-weight: 500;
+    font-size: 40px;
     margin-bottom: 20px;
 	color: white;
     
@@ -60,7 +60,7 @@
 .col >li{
     padding-left: 50px;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 20px;
 	color: white;
     

@@ -113,10 +113,9 @@ color: white;
 }
 
 label{
-    
     margin-bottom: 20px;
     color: white;
-    display: inline-block;
+    display: flex;
     width: 90%;
     text-align: left;
 }
@@ -125,18 +124,18 @@ label{
     height: 30px;
     margin-bottom: 10px;
     background-color:#e6e6e6;
-    width: 98%;
+    width: 93%;
 }
 
 
 
 .register_container {
-    width: 320px;
+    width: 340px;
     height: auto;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    padding-top: 10px;
+    padding-top: 0%;
     border: 1px solid lightgray;
     background: rgba(0, 0,0, 0.5);
     display: inline-block;

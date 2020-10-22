@@ -31,7 +31,7 @@ class Meditation extends Component {
 		this.state = {
 			pbuttonUrl: playButton,
 			audioStatus: Sound.status.STOPPED,
-			timeValues: [120, 300, 600, 900],
+			timeValues: [120, 300, 600, 900,1200 ],
 			audioNames: ['Rain', 'Forest', 'Park', 'Stream', 'Waves'],
 			seekCurrentPosition: 0,
 			audioUrl: rainAudio, // Default

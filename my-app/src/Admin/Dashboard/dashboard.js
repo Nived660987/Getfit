@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ClippedDrawer() {
 	const classes = useStyles();
-	const [Dash, setDash] = useState('Delete Workout');
+	const [Dash, setDash] = useState('App2');
 	const setDashboard = () => {
 		switch (Dash) {
 			case 'Users':

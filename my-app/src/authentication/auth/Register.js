@@ -8,6 +8,7 @@ export default function Register() {
 	const [email, setEmail] = useState();
 	const [password, setPassword] = useState();
 	const [passwordCheck, setPasswordCheck] = useState();
+	const [Age, setAge] = useState();
 	const [displayName, setDisplayName] = useState();
 	const [error, setError] = useState();
 
@@ -38,7 +39,7 @@ export default function Register() {
 	return (
 		<div className="register">
 			<div className="register_container">
-				<h1>Register</h1>
+				<h1 style={{ color: 'White', fontStyle: 'normal' }}>Register</h1>
 				{error && <ErrorNotice message={error} clearError={() => setError(undefined)} />}
 				<form className="form" onSubmit={submit}>
 					<label htmlFor="register-email">Email</label>
@@ -53,6 +54,8 @@ export default function Register() {
 						type="password"
 						onChange={(e) => setPasswordCheck(e.target.value)}
 					/>
+					<label htmlFor="register-Age">Age</label>
+					<input id="register-Age" type="Number" onChange={(e) => setAge(e.target.value)} />
 
 					<label htmlFor="register-display-name">Display Name</label>
 					<input id="register-display-name" type="text" onChange={(e) => setDisplayName(e.target.value)} />

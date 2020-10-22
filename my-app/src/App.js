@@ -24,6 +24,7 @@ import dashboard from './Admin/Dashboard/dashboard';
 import Meditation from "./category/Meditation";
 import Fitness from "./category/Fitness";
 import Food from './category/Food';
+import Meditationblog from './category/Meditationblog';
 
 
 function App() {
@@ -65,7 +66,7 @@ function App() {
 						<Route path="/Login" component={Login} />
 						<Route path="/Register" component={Register} />
 						<Route path="/category/Covid" component={Covid} />
-						<Route path="/category/Meditation" component={Meditation} />
+						<Route path="/category/Meditation" component={Meditationblog} />
 						<Route path="/category/Diet" component={Diet} />
 						<Route path="/category/BeautySleep" component={Meditation} />
 						<Route path="/category/Fitness" component={Fitness} />
