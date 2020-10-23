@@ -3,12 +3,13 @@ import { useHistory } from 'react-router-dom';
 import Axios from 'axios';
 import UserContext from '../../context/UserContext';
 import ErrorNotice from '../misc/ErrorNotice';
-import { FormControl, Select, MenuItem } from '@material-ui/core';
+import { FormControl, Select, MenuItem, Radio } from '@material-ui/core';
+
 export default function Register() {
 	const [email, setEmail] = useState();
 	const [password, setPassword] = useState();
 	const [passwordCheck, setPasswordCheck] = useState();
-	const [Age, setAge] = useState();
+	const [age, setAge] = useState();
 	const [displayName, setDisplayName] = useState();
 	const [error, setError] = useState();
 
@@ -19,7 +20,7 @@ export default function Register() {
 		e.preventDefault();
 
 		try {
-			const newUser = { email, password, passwordCheck, displayName };
+			const newUser = { email, password, passwordCheck,age, displayName };
 			await Axios.post('http://localhost:5000/users/register', newUser);
 			const loginRes = await Axios.post('http://localhost:5000/users/login', {
 				email,
@@ -56,7 +57,6 @@ export default function Register() {
 					/>
 					<label htmlFor="register-Age">Age</label>
 					<input id="register-Age" type="Number" onChange={(e) => setAge(e.target.value)} />
-
 					<label htmlFor="register-display-name">Display Name</label>
 					<input id="register-display-name" type="text" onChange={(e) => setDisplayName(e.target.value)} />
 					<div className="login_button">

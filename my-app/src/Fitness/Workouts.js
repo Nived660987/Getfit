@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 import axios from 'axios';
 import CCard from '../components/Card';
+import "./fitness.css";
 
 const Workouts = ({ workouts }) => {
 	const [exercise, setExercises] = useState([]);
@@ -32,14 +33,21 @@ const Workouts = ({ workouts }) => {
 
 	return (
 		<div className="deluser">
-			<h1> Choose your workout</h1>
+			
+				<h1> Choose your workout</h1>
 
-			<input className="search" type="text" placeholder="Search" onChange={(e) => setSearch(e.target.value)} />
-
+				<input
+					
+					className="search"
+					type="text"
+					placeholder="Search"
+					onChange={(e) => setSearch(e.target.value)}
+				/>
+		
 			{workouts
 				.filter((workout) => {
 					if (search == null || search == undefined) return workout;
-					else if (workout.workoutType == search) return workout;
+					else if (workout.workoutType == search || workout.level == search) return workout;
 				})
 				.map((workout, key) => (
 					<div className="workoutc" key={key}>
@@ -55,7 +63,6 @@ const Workouts = ({ workouts }) => {
 								workoutType={workout.workoutType}
 							/>
 						</Link>
-						
 					</div>
 				))}
 		</div>

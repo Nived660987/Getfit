@@ -44,11 +44,14 @@ const getExercise= async (req,res,next) =>{
   };
 
 const createExercise= async (req,res,next)=>{
-     const {img,title,description,workoutType,exercises}=req.body;
+     const {img,title,level,workoutType,exercises}=req.body;
+     if (!img || !title || !level || !workoutType || !exercises)
+			return res.status(400).json({ msg: 'Not all fields have been entered.' });
+		
      const createdExercise=new Exercise({
          img,
         title,
-        description,
+        level,
         workoutType,
         exercises
         
@@ -56,8 +59,7 @@ const createExercise= async (req,res,next)=>{
      try{
          await createdExercise.save();
      }catch(err){
-         const error=new HttpError("Create exercise failed",500);
-         return next(error);
+         res.status(500).json({ HttpError: err.message });
      }
      res.status(201).json({exercise: createdExercise});
 
@@ -66,7 +68,7 @@ const createExercise= async (req,res,next)=>{
   };
 
    const updateExercise= async (req,res,next) =>{
-      const { img, title, description, workoutType, exercises } = req.body;
+      const { img, title, level, workoutType, exercises } = req.body;
         const exerciseId=req.params.eid;
         let exercise;
     try{
@@ -78,7 +80,7 @@ const createExercise= async (req,res,next)=>{
     }
         exercise.img = img;
         exercise.title=title;
-        exercise.description=description;
+        exercise.level=level;
         exercise.workoutType = workoutType;
         exercise.exercises = exercises;
         try{

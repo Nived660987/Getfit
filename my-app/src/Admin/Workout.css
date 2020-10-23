@@ -1,10 +1,11 @@
 .AddWorkout_exercise{
-    width: 345px;
+    width: auto;
     height: auto;
     display: flex;
     padding: 20px;
     border: 1px solid lightgray;
-    background: #5495d6;
+    background-size: cover;
+    background-image: url("https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
     display: inline-block;
     text-align: left; 
 }
@@ -20,16 +21,17 @@
 }
 
 .search{
-    width: 100%;
+         width: 100%;
         padding: 12px 24px;
         background-color: white;
-        transition: transform 250ms ease-in-out;
         font-size: 14px;
         line-height: 15px;
         color: #575756;
+        display: flex;
 }
 
-.fitnesscard{
-    flex-direction: column;
-    
+
+
+.deluser{
+    height:'50px';
 }

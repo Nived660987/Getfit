@@ -1,5 +1,5 @@
 import React from 'react';
-export const Underweight = () => {
+ const Underweight = () => {
 	return (
 		<div className="col">
 		<h1>For Underweight</h1>
@@ -18,11 +18,7 @@ export const Underweight = () => {
 									<li>Eggs are one of the healthiest muscle-binding food.</li>
 
 									
-									<a href="/category/Food">
-										<button className="Foodbutton" href="/Food">
-											Checkout Food Recipe
-										</button>
-                                        </a>
+									
                                         </div>
 	);
 }

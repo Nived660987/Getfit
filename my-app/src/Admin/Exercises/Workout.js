@@ -5,13 +5,13 @@ import React,{useEffect,useState} from "react";
  import '../Workout.css';
 const Workout=props=>{
     const[title,setTitle]=useState("");
-    const[description,setDescription]=useState("");
+    const[level,setLevel]=useState("");
     const[exercises,setExercises]=useState([""]);
     useEffect(() =>{
         axios.get(`http://localhost:5000/api/exercises/${props.match.params.id}`)
         .then(res => [
             setTitle(res.data.title),
-            setDescription(res.data.description),
+            setLevel(res.data.description),
             setExercises(res.data.exercises)
         ])
         .catch(error =>console.log(error));
@@ -22,7 +22,7 @@ const Workout=props=>{
 		<div className="AddWorkout_exercise">
 			Welcome..!!!
 			<h2>{title}</h2>
-			<p>{description}</p>
+			<p>{level}</p>
 			<div className="fitnesscard">
 				{exercises.map((exercise, key) => (
 					<div keys={key}>

@@ -31,7 +31,7 @@ const Workouts = ({ workouts }) => {
 		}*/
 
 	return (
-		<div className="workout">
+		<div className="workoutcs">
 			<div className="deluser">
 				<h1> Choose your workout</h1>
 
@@ -40,7 +40,7 @@ const Workouts = ({ workouts }) => {
 			{workouts
 				.filter((workout) => {
 					if (search == null || search == undefined) return workout;
-					else if (workout.workoutType == search) return workout;
+					else if (workout.workoutType == search || workout.level==search) return workout;
 				})
 				.map((workout, key) => (
 					<div className="workoutc" key={key}>
@@ -53,7 +53,7 @@ const Workouts = ({ workouts }) => {
 							className="ccard"
 								img={workout.img}
 								title={workout.title}
-								description={workout.description}
+								level={workout.level}
 								workoutType={workout.workoutType}
 							/>
 						</Link>

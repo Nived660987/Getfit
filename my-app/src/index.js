@@ -5,10 +5,8 @@ import {BrowserRouter as Router} from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from "./App";
-import Overweight from "./Overweight";
 import App1 from './Admin/Exercises/App1';
 import App2 from './Admin/Users/App2';
-import Underweight from "./Diet/Underweight";
 import Meditationblog from "./category/Meditationblog";
 
 

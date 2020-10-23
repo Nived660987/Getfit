@@ -9,7 +9,7 @@ export default function EditWorkout(props)
 {
   const [img,setImg]=useState();
   const [title, setTitle] = useState();
-  const [description, setDescription] = useState();
+  const [level, setLevel] = useState();
   const [workoutType,setType]=useState();
   const [exercises,setExercises]=useState([
       {image:" ", exerciseName:" "}
@@ -34,7 +34,7 @@ export default function EditWorkout(props)
     Axios.get(`http://localhost:5000/api/exercises/${props.match.params.id}`)
     .then(res => [
         setTitle(res.data.title),
-        setDescription(res.data.description),
+        setLevel(res.data.level),
         setExercises(res.data.exercises)
     ])
     .catch(error =>console.log(error));
@@ -46,7 +46,7 @@ export default function EditWorkout(props)
 
     e.preventDefault();
     try{
-        const editExercise={img,title,description,workoutType,exercises};
+        const editExercise={img,title,level,workoutType,exercises};
         await Axios.patch(`http://localhost:5000/api/exercises/${props.match.params.id}`,editExercise); 
         if(editExercise)
           alert("Workout Edit Success");
@@ -56,49 +56,58 @@ export default function EditWorkout(props)
     }
 };
   
-    return(
-        <div>
-            <form className="form" onSubmit={submit}>
-            <label>Title Image</label>
-                <input type="text" name="title-Image"
-                onChange={(e) => setImg(e.target.value)} />
-                <label>Title</label>
-                <input type="text" name="title"
-                onChange={(e) => setTitle(e.target.value)} />
-                <label>Description</label>
-                <input type="text" name="Description"
-                 onChange={(e)=> setDescription(e.target.value)} /> 
-                 <label>Workout Type</label>
-                <input type="text" name="type"
-                onChange={(e) => setType(e.target.value)} />
-                 {exercises.map((exercise,index) => (
-                     <div key={index}>
-                         <label>Image</label>
-                          <input type="text" name="image" value={exercise.image}
-                            onChange={event => handleChangeInput(index,event) }/>
-                            <label>Exercise Name</label>
-                          <input type="text" name="exerciseName" value={exercise.exerciseName}
-                           onChange={event => handleChangeInput(index,event)}    />
+    return (
+		<div className="AddWorkout_exercise">
+			<h1 style={{ color: 'White', fontStyle: 'normal' }}>Edit Workout</h1>
+			<form className="form" onSubmit={submit}>
+				<label>Title Image</label>
+				<input type="text" name="title-Image" onChange={(e) => setImg(e.target.value)} />
+				<label>Title</label>
+				<input type="text" name="title" onChange={(e) => setTitle(e.target.value)} />
+				<label>Level</label>
+				<select onChange={(e) => setLevel(e.target.value)}>
+					<option value="Beginner">Beginner</option>
+					<option value="Intermediate">Intermediate</option>
+					<option value="Advanced">Advanced</option>
+				</select>
+				<label>Workout Type</label>
+				<select onChange={(e) => setType(e.target.value)}>
+					<option value="Strength">Strength</option>
+					<option value="Mobility">Mobility</option>
+					<option value="Endurance">Endurance</option>
+					<option value="Yoga">Yoga</option>
+				</select>
+				{exercises.map((exercise, index) => (
+					<div key={index}>
+						<label>Image</label>
+						<input
+							type="text"
+							name="image"
+							value={exercise.image}
+							onChange={(event) => handleChangeInput(index, event)}
+						/>
+						<label>Exercise Name</label>
+						<input
+							type="text"
+							name="exerciseName"
+							value={exercise.exerciseName}
+							onChange={(event) => handleChangeInput(index, event)}
+						/>
 
-             <IconButton
-              onClick={() => handleRemoveFields(index)}
-            >
-              <RemoveIcon />
-            </IconButton>
-                            
-                
-                <IconButton onClick={()=>addInput()}>
-                     <AddIcon/>
-                 </IconButton>
-                 </div>
-                
-                  ))}
-                   <div>
-                     <label>Submit</label>
-                <input type="submit" value="Submit" />
-                 </div>
-            </form>
-        </div>
-       
-    )
+						<IconButton onClick={() => handleRemoveFields(index)}>
+							<RemoveIcon />
+						</IconButton>
+
+						<IconButton onClick={() => addInput()}>
+							<AddIcon />
+						</IconButton>
+					</div>
+				))}
+				<div>
+					<label>Submit</label>
+					<input type="submit" value="Submit" />
+				</div>
+			</form>
+		</div>
+	);
     };

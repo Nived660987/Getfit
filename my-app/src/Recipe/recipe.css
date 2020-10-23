@@ -23,7 +23,7 @@ h1 {
   letter-spacing: 0.1rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: oblique;
-  color: goldenrod;
+  color:black;
   text-shadow: 0 0.2rem 5rem rgb(119, 115, 115);
   text-transform: uppercase;
   margin: 4rem 0;
@@ -124,6 +124,7 @@ h1 {
 .recipe a {
   font-size: 1.8rem;
   color: #40b48e;
+  
 }
 
 .recipe button {
@@ -133,9 +134,11 @@ h1 {
   background-color: #40b48e;
   border: none;
   border-radius: 0.5rem;
-  height: 4.5rem;
-  position: static;
-  padding: 18px;
+  height: auto;
+  width: auto;
+  position: relative;
+  align-self: center;
+  align-content: center;
 }
 
 .ingredient-list {

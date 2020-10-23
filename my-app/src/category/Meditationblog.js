@@ -86,9 +86,7 @@ class Meditationblog extends Component {
 												<ol>
 													<h2
 														style={{
-															fontSize: '38px',
-															textDecoration: 'underline',
-															textDecorationColor: 'orange',
+															fontSize: '38px'
 														}}
 													>
 														CONCENTRATION MEDITATION
@@ -124,15 +122,14 @@ class Meditationblog extends Component {
 													<h2
 														style={{
 															fontSize: '38px',
-															textDecoration: 'underline',
-															textDecorationColor: 'orange',
+															
 														}}
 													>
 														MINDFULNESS MEDITATION
 													</h2>
 													<img alt="timer" src={require('../images/mind.jpg')} />
 
-													<li style={{ fontSize: '180%' }}>
+													<li style={{ fontSize: '180%', paddingTop: '10px' }}>
 														Mindfulness meditation encourages the practitioner to observe
 														wandering thoughts as they drift through the mind. The intention
 														is not to get involved with the thoughts or to judge them, but
@@ -155,9 +152,7 @@ class Meditationblog extends Component {
 
 												<h2
 													style={{
-														fontSize: '38px',
-														textDecoration: 'underline',
-														textDecorationColor: 'orange',
+														fontSize: '38px'
 													}}
 												>
 													OTHER MEDITATION TECHNIQUES

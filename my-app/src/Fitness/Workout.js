@@ -19,14 +19,14 @@ const Workout = (props) => {
 	}, [props]);
 
 	return (
-		<div>
+		<div className="Detailwork">
 			<Header />
 			Welcome..!!!
-			<h2>{title}</h2>
-			<p>{description}</p>
+			<h2 style={{ color: 'white' }}>{title}</h2>
+			<p style={{ color: 'white' }}>{description}</p>
 			<div>
 				{exercises.map((exercise, key) => (
-					<div keys={key}>
+					<div className="workoutd" key={key}>
 						<CCard img={exercise.image} title={exercise.exerciseName} />
 					</div>
 				))}

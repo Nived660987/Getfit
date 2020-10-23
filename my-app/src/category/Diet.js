@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../Diet/Diet.css';
 import Button from '@material-ui/core/Button';
 import Typography from '../components/Typography';
+import Underweight from '../Diet/Underweight';
+import Overweight from '../Diet/Overweight';
 
 class Diet extends Component {
 	constructor(props) {
@@ -52,7 +54,12 @@ class Diet extends Component {
 	setHeight(e) {
 		this.setState({ height: e.target.value });
 	}
-
+	display=()=>{
+	if(this.state.judge =='Underweight')
+		return <Underweight/>;
+	else if(this.state.judge=='Overweight')
+		return <Overweight/>;
+	}
 	render() {
 		return (
 			<div className="Diet">
@@ -135,32 +142,9 @@ class Diet extends Component {
 										health
 									</li>
 
-									<h1>For Underweight</h1>
-
-									<li>Drinking homemade protein smoothies is highly nutritious to gain weight.</li>
-									<li>Milk provides good balance of proteins, carbs, fats and calcium.</li>
-									<li>Whole-grain breads are another good carb source to help you gain weight.</li>
-									<li>
-										Dry Fruits: Just one small handful of almonds contains over 7 grams of protein
-										and 18 grams of healthy fats.
-									</li>
-									<li>
-										Healthy cereals can be an excellent source of carbs, calories and nutrients like
-										oats, multigrains.
-									</li>
-									<li>Eggs are one of the healthiest muscle-binding food.</li>
-
-									<h1>For Overweight</h1>
-
-									<li>Eat Vegetables or Fruit Salad on every day basis.</li>
-									<li>
-										Consume Legumes such as Mung beans, black-eyed peas, kidney beans and Pulses on
-										alternate days.
-									</li>
-									<li>Eat a high protein breakfast and soluble fiber.</li>
-									<li>Water is a very important element of a balanced diet.</li>
-									<li>Dinner should be light and taken at least two hours before bedtime.</li>
-									<li>Get good quality sleep.</li>
+									<main>
+										{this.display()}
+									</main>
 
 									<a href="/category/Food">
 										<button className="Foodbutton" href="/Food">

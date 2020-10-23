@@ -8,11 +8,11 @@ const error= require("../models/http-error-model");
 // Registeration
 router.post("/register", async (req, res) => {
   try {
-    let { email, password, passwordCheck, displayName } = req.body;
+    let { email, password, passwordCheck, age, displayName, } = req.body;
 
     // validation
 
-    if (!email || !password || !passwordCheck)
+    if (!email || !password || !passwordCheck || !age)
       return res.status(400).json({ msg: "Not all fields have been entered." });
     if (password.length < 5)
       return res
@@ -34,6 +34,7 @@ router.post("/register", async (req, res) => {
     const newUser = new User({
       email,
       password: passwordHash,
+      age,
       displayName,
     });
     const savedUser = await newUser.save();

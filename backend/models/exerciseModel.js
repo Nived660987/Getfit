@@ -7,7 +7,7 @@ const exerciseSchema=new Schema({
 
     img:{type: String, required: true},
     title: { type: String, required: true },
-    description:{ type: String, required: true},
+    level:{ type: String, required: true},
     workoutType:{ type: String, required:true},
     exercises:[{
         image:{type: String, required: true},

@@ -11,19 +11,59 @@
     padding-top: 80px;
 }
 
-.deluser{
-    padding-top: 80px;
-   
-}
 
 .search{
-    position:absolute;
+   position: absolute;
     left:76%;
     top:12%;
     width:20%;   
 }
 .workoutc{
-    padding-top: 100px;
+    padding-top: 10px;
    
 }
+.workoutd{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    
+   
+}
+.deluser{
+    height: 250px;
+    width: 100%;
+    padding-top: 23px;
+}
 
+.workoutus{
+    height: auto;
+    width: auto;
+}
+
+.Detailwork{
+
+    padding-top: 50px;
+    background-color: grey;
+    color: 'black';
+    width: auto;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    
+}
+.cardwork{
+    flex-direction: row;
+}
+
+.fitnesscard{
+width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+   margin: 10px;
+ 
+
+    
+}

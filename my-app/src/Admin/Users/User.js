@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import "../../Fitness/fitness.css";
 const User = (props) => {
 	const [email, setEmail] = useState('');
 	const [displayName, setdisplayName] = useState('');
@@ -13,7 +13,7 @@ const User = (props) => {
 	}, [props]);
 
 	return (
-		<div>
+		<div className="workoutus">
 			Welcome..!!!
 			<h2>{email}</h2>
 			<h3>{displayName}</h3>
