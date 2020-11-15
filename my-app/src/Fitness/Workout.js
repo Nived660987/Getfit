@@ -24,6 +24,7 @@ const Workout = (props) => {
 			Welcome..!!!
 			<h2 style={{ color: 'white' }}>{title}</h2>
 			<p style={{ color: 'white' }}>{description}</p>
+			<br/>
 			<div>
 				{exercises.map((exercise, key) => (
 					<div className="workoutd" key={key}>

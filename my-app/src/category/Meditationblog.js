@@ -23,40 +23,42 @@ class Meditationblog extends Component {
 								<h1 style={{ color: 'black', fontStyle: 'normal', fontSize: '280%' }}>
 									HOW TO MEDITATE: SIMPLE MEDITATION FOR BEGINNERS
 								</h1>
-								<h2>This Meditation Exercise Is An Excellent Introduction To Meditation Techniques.</h2>
+								<h2 style={{ color: 'black', fontStyle: 'normal', fontSize: '200%', fontWeight: 'bold' }}>
+									This Meditation Exercise Is An Excellent Introduction To Meditation Techniques.
+								</h2>
 								<ol>
-									<h3>
+									<h2>
 										<li>
 											Sit Or Lie Comfortably. You May Even Want To Invest In A Meditation Chair Or
 											Cushion.
 										</li>
-									</h3>
-									<h3>
+									</h2>
+									<h2>
 										<li>
 											Close Your Eyes. We Recommend Using One Of Our Cooling Eye Masks Or
 											Restorative Eye Pillows If Lying Down.{' '}
 										</li>
-									</h3>
-									<h3>
+									</h2>
+									<h2>
 										<li>Make No Effort To Control The Breath; Simply Breathe Naturally.</li>
-									</h3>
+									</h2>
 
-									<h3>
+									<h2>
 										<li>
 											Focus Your Attention On The Breath And On How The Body Moves With Each
 											Inhalation And Exhalation. Notice The Movement Of Your Body As You Breathe.
 										</li>
-									</h3>
-									<h3>
+									</h2>
+									<h2>
 										<li>
 											{' '}
 											Observe Your Chest, Shoulders, Rib Cage, And Belly. Simply Focus Your
 											Attention On Your Breath Without Controlling Its Pace Or Intensity.{' '}
 										</li>
-									</h3>
-									<h3>
+									</h2>
+									<h2>
 										<li>If Your Mind Wanders, Return Your Focus Back To Your Breath.</li>
-									</h3>
+									</h2>
 								</ol>
 
 								<a href="/category/BeautySleep">
@@ -86,16 +88,12 @@ class Meditationblog extends Component {
 												<ol>
 													<h2
 														style={{
-															fontSize: '38px'
+															fontSize: '38px',
 														}}
 													>
 														CONCENTRATION MEDITATION
 													</h2>
-													<img
-														
-														alt="timer"
-														src={require('../images/concen.jpg')}
-													/>
+													<img alt="timer" src={require('../images/concen.jpg')} />
 													<li style={{ fontSize: '180%' }}>
 														{' '}
 														Concentration meditation involves focusing on a single point.
@@ -122,7 +120,6 @@ class Meditationblog extends Component {
 													<h2
 														style={{
 															fontSize: '38px',
-															
 														}}
 													>
 														MINDFULNESS MEDITATION
@@ -152,7 +149,7 @@ class Meditationblog extends Component {
 
 												<h2
 													style={{
-														fontSize: '38px'
+														fontSize: '38px',
 													}}
 												>
 													OTHER MEDITATION TECHNIQUES

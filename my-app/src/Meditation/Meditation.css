@@ -106,6 +106,7 @@ button .active {
 .playPause {
   width: 40px;
   z-index: 10;
+  
 }
 
 .audioSeek {
